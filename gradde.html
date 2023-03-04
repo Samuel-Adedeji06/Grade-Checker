@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body class="ms-2 me-2" onload="play()">
+        <div class="col-lg-7 col-md-7 col-sm-9 mt-lg-4 mt-md-4 mt-sm-2 mx-auto shadow p-4 rounded-3">
+            <h1 class="text-center text-decoration-underline">Grade Checker</h1>
+            <div class="form-group my-2">
+                <input type="number" placeholder="Input your score" id="score" class="form-control shadow-sm p-2">
+            </div>
+            <div class="form-group my-4">
+                <button class="btn btn-primary w-100" onclick="checkScore()">Check</button>
+            </div>
+        </div>
+        <div class="mt-5 text-center" id="showScore"></div>
+    
+
+
+        <script>
+            function checkScore() {
+                // alert("I am working")
+                var score = document.getElementById("score").value;
+                if (score >= 0 & score <= 39 )  {
+                    // alert("You failed")
+                    var result = "F9-You Failed";
+                    showScore.innerHTML = result;
+                    showScore.style.color = "red";
+                }
+            }
+        </script>
+        
+        <!-- <script>
+            function checkScore() {
+                // alert("I am working")
+                var score = document.getElementById("score").value;
+                if (score >= 39 && score <= 49)  {
+                    // alert("You failed")
+                    var result = "E8-Poor";
+                    showScore.innerHTML = result;
+                    showScore.style.color = "red";
+                }
+            } -->
+        </script>
+            
+</body>
+</html>
